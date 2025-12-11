@@ -126,10 +126,11 @@ const CONFIG = {
         { value: '17X', type: 'high' },
         { value: '20X', type: 'high' }
     ],
-    platforms: [
+    // Default platforms (fallback if no external config)
+    defaultPlatforms: [
         { id: 1, url: 'https://popduqo.com?ch=23890' },
         { id: 2, url: 'https://popx5t.com?ch=13250' },
-        { id: 3, url: 'https://popuptefa.com?ch=33323' }, // POPN1
+        { id: 3, url: 'https://popuptefa.com?ch=33323' },
         { id: 4, url: 'https://popbra.com/#/register?r_code=255862939718' },
         { id: 5, url: 'https://pop555.com/#/register?r_code=27363421531' },
         { id: 6, url: 'https://www.popbem66.com/#/register?r_code=62548100237' },
@@ -140,12 +141,33 @@ const CONFIG = {
         { id: 11, url: 'https://26bet.com/?id=911719620' },
         { id: 12, url: 'https://poppg.com/#/register?r_code=87311374506' },
         { id: 13, url: 'https://q5gdw6.com?ch=2291' },
-        { id: 14, url: 'https://popdezem.com?ch=30988' }, // POPDEZ
+        { id: 14, url: 'https://popdezem.com?ch=30988' },
         { id: 15, url: 'https://9zqllv.com?ch=17356' },
         { id: 16, url: 'https://popceu.com/#/register?r_code=46223100109' },
-        { id: 17, url: 'https://poplud.com?ch=30282' }, 
+        { id: 17, url: 'https://poplud.com?ch=30282' }
     ]
 };
+
+// ============================================
+// PLATFORMS GETTER - Checks for external config at runtime
+// ============================================
+function getPlatforms() {
+    // Check if external PLATFORMS_CONFIG was loaded
+    if (typeof PLATFORMS_CONFIG !== 'undefined' && Array.isArray(PLATFORMS_CONFIG)) {
+        console.log('✅ Using EXTERNAL platforms config:', PLATFORMS_CONFIG.length, 'platforms');
+        return PLATFORMS_CONFIG;
+    }
+    // Fall back to default
+    console.log('⚠️ Using DEFAULT platforms (no external config found)');
+    return CONFIG.defaultPlatforms;
+}
+
+// For backwards compatibility - CONFIG.platforms will use getPlatforms()
+Object.defineProperty(CONFIG, 'platforms', {
+    get: function() {
+        return getPlatforms();
+    }
+});
 
 // Estado da aplicação
 let showAllGames = true;
