@@ -4,13 +4,13 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://yourwebsite.com/</loc>
+        <loc>https://poprtp.com/</loc>
         <lastmod>2025-12-10</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://yourwebsite.com/asset/banner/1%20(1).jpg</image:loc>
-            <image:title>POP REDE Sistema RTP</image:title>
+            <image:loc>https://poprtp.com/asset/banner/1%20(1).jpg</image:loc>
+            <image:title>POP RTP Sistema RTP</image:title>
         </image:image>
     </url>
     
