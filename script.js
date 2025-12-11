@@ -104,6 +104,11 @@
 // CONFIGURAÇÃO
 // ============================================
 */
+// ============================================
+// CDN BASE URL - For Multi-Site Architecture
+// ============================================
+const CDN_BASE = 'https://poprtp88.github.io/TEST-RTP-BARU-2';
+
 const CONFIG = {
     gamesPerProvider: 0, // 0 = mostrar todos
     rtpRanges: {
@@ -483,7 +488,7 @@ async function loadAllGames() {
                             id: gameId,
                             provider: provider,
                             imageName: imageName,
-                            imagePath: `images/${provider}/${imageName}`,
+                            imagePath: `${CDN_BASE}/images/${provider}/${imageName}`,
                             priority: priority
                         });
                     });
@@ -515,7 +520,7 @@ async function loadAllGames() {
                     id: gameId,
                     provider: provider,
                     imageName: imageName,
-                    imagePath: `images/${provider}/${imageName}`,
+                    imagePath: `${CDN_BASE}/images/${provider}/${imageName}`,
                     priority: priority
                 });
             });
@@ -835,7 +840,7 @@ function generatePlatformCards() {
         card.innerHTML = `
             ${hotBadge}
             <div class="platform-overlay"></div>
-            <img src="asset/${platform.id}.png" alt="Plataforma ${platform.id}" />
+            <img src="${CDN_BASE}/asset/${platform.id}.png" alt="Plataforma ${platform.id}" />
             <div class="platform-status">
                 <span class="status-dot"></span>
                 ONLINE
