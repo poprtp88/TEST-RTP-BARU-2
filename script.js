@@ -109,6 +109,18 @@
 // ============================================
 const CDN_BASE = 'https://poprtp88.github.io/TEST-RTP-BARU-2';
 
+// ============================================
+// DEBUG: Check for external platforms config
+// ============================================
+console.log('🔍 SCRIPT.JS LOADED - Checking for PLATFORMS_CONFIG...');
+console.log('🔍 typeof PLATFORMS_CONFIG:', typeof PLATFORMS_CONFIG);
+if (typeof PLATFORMS_CONFIG !== 'undefined') {
+    console.log('✅ PLATFORMS_CONFIG FOUND! Length:', PLATFORMS_CONFIG.length);
+    console.log('✅ First platform URL:', PLATFORMS_CONFIG[0]?.url);
+} else {
+    console.log('⚠️ PLATFORMS_CONFIG NOT FOUND - will use defaults');
+}
+
 const CONFIG = {
     gamesPerProvider: 0, // 0 = mostrar todos
     rtpRanges: {
@@ -149,25 +161,17 @@ const CONFIG = {
 };
 
 // ============================================
-// PLATFORMS GETTER - Checks for external config at runtime
+// PLATFORMS ASSIGNMENT - Use external config or defaults
 // ============================================
-function getPlatforms() {
-    // Check if external PLATFORMS_CONFIG was loaded
-    if (typeof PLATFORMS_CONFIG !== 'undefined' && Array.isArray(PLATFORMS_CONFIG)) {
-        console.log('✅ Using EXTERNAL platforms config:', PLATFORMS_CONFIG.length, 'platforms');
-        return PLATFORMS_CONFIG;
-    }
-    // Fall back to default
-    console.log('⚠️ Using DEFAULT platforms (no external config found)');
-    return CONFIG.defaultPlatforms;
+// Directly assign platforms based on whether external config exists
+if (typeof PLATFORMS_CONFIG !== 'undefined' && Array.isArray(PLATFORMS_CONFIG) && PLATFORMS_CONFIG.length > 0) {
+    CONFIG.platforms = PLATFORMS_CONFIG;
+    console.log('✅✅✅ USING EXTERNAL PLATFORMS:', PLATFORMS_CONFIG.length, 'platforms');
+    console.log('✅ First platform:', PLATFORMS_CONFIG[0]);
+} else {
+    CONFIG.platforms = CONFIG.defaultPlatforms;
+    console.log('⚠️⚠️⚠️ USING DEFAULT PLATFORMS (no external config)');
 }
-
-// For backwards compatibility - CONFIG.platforms will use getPlatforms()
-Object.defineProperty(CONFIG, 'platforms', {
-    get: function() {
-        return getPlatforms();
-    }
-});
 
 // Estado da aplicação
 let showAllGames = true;
