@@ -3,73 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1e0505">
+    <meta name="theme-color" content="#1a0508">
     
     <!-- SEO Meta Tags -->
-    <title>LUCAS RTP - Sistema RTP em Tempo Real</title>
-    <meta name="description" content="Sistema RTP exclusivo do Lucas - Análise em tempo real de slots e jogos de cassino.">
+    <title>GRUPO VIP - Sistema RTP em Tempo Real</title>
+    <meta name="description" content="Sistema RTP exclusivo - Análise em tempo real de slots e jogos de cassino.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://poprtp.com/lucas/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="LUCAS RTP - Sistema RTP">
+    <meta property="og:title" content="GRUPO VIP - Sistema RTP">
     <meta property="og:url" content="https://poprtp.com/lucas/">
     <meta property="og:image" content="https://poprtp.com/banner/1%20(1).jpg">
-    <meta property="og:site_name" content="LUCAS RTP">
+    <meta property="og:site_name" content="GRUPO VIP">
     
-    <!-- ROOT: Favicon (from main site) -->
+    <!-- ROOT: Favicon -->
     <link rel="icon" href="../asset/favicon/favicon.jpg" type="image/jpeg">
     
-    <!-- LOCAL: Custom Styles (this variation only) -->
+    <!-- LOCAL: Custom Styles -->
     <link rel="stylesheet" href="styles.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="terminal-bg"><div class="grid-overlay"></div><div class="scan-line"></div></div>
 
-    <!-- System Status Bar -->
-    <div class="system-status-bar">
-        <div class="status-group">
-            <div class="status-item"><span class="status-icon">●</span><span class="status-label">SISTEMA:</span><span class="status-value status-online">ONLINE</span></div>
-            <div class="status-item"><span class="status-label">SYNC:</span><span class="status-value" id="syncStatus">SINCRONIZADO</span></div>
-        </div>
-        <div class="status-group">
-            <div class="status-item"><span class="status-label">PRÓX.:</span><span class="status-value" id="nextUpdate">--:--</span></div>
-            <div class="status-item"><span class="status-label">JOGOS:</span><span class="status-value" id="activeGames">623</span></div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="terminal-prompt"><span class="prompt-symbol">lucas@rtp:~$</span><span class="prompt-command">./rtp-analytics --mode=live</span></div>
-            <div class="header-content">
-                <div class="header-left">
-                    <div class="logo-container"><span class="logo-bracket">[</span><span class="logo-text">LUCAS RTP</span><span class="logo-bracket">]</span></div>
-                    <div class="version-tag">FIRE</div>
-                </div>
-                <div class="header-center">
-                    <h1 class="main-title">/// SISTEMA DE RTP ///</h1>
-                    <div class="subtitle">RASTREAMENTO EM TEMPO REAL</div>
-                </div>
-                <div class="header-right">
-                    <div class="system-info">
-                        <div class="info-item"><span class="info-label">UPTIME:</span><span class="info-value" id="systemUptime">00:00:00</span></div>
-                        <div class="info-item"><span class="info-label">HORA:</span><span class="info-value" id="systemTime">00:00:00</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
+            
+            <!-- CTA HERO BOX -->
+            <section class="hero-cta">
+                <div class="cta-box">
+                    <div class="cta-left">
+                        <div class="cta-badge">🔥 JUNTE-SE À EQUIPE MENTOR RIBEIRO</div>
+                        <h2 class="cta-title">COMECE A GANHAR AGORA!</h2>
+                    </div>
+                    <a href="https://popduqo.com?ch=23890" target="_blank" rel="noopener" class="cta-button">
+                        <span class="cta-btn-arrow">→</span>
+                        <span class="cta-btn-text">REGISTRAR AGORA</span>
+                    </a>
+                    <div class="cta-right">
+                        <p class="cta-desc">Acesse os melhores RTPs em tempo real</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIMER & BANNER -->
             <div class="banner-timer-wrapper">
                 <section class="timer-section">
                     <div class="timer-split-wrapper">
@@ -77,7 +61,6 @@
                             <div class="timer-display"><span class="timer-minutes" id="timerMinutes">01</span><span class="timer-separator">:</span><span class="timer-seconds" id="timerSeconds">27</span></div>
                             <div class="timer-progress"><div class="timer-progress-bar" id="timerProgressBar"></div><div class="timer-progress-text"><span>INÍCIO</span><span id="progressPercent">72%</span><span>PRÓXIMO</span></div></div>
                         </div>
-                        <!-- ROOT: Side banner from main site -->
                         <a href="https://popduqo.com?ch=23890" target="_blank" class="side-banner-container">
                             <img src="../banner/side-1.png" alt="Banner">
                         </a>
@@ -86,7 +69,6 @@
 
                 <section class="banner-carousel">
                     <div class="carousel-container">
-                        <!-- ROOT: Banners from main site -->
                         <div class="carousel-track" id="carouselTrack">
                             <div class="carousel-slide"><img src="../banner/1%20(1).jpg" alt="Banner 1"></div>
                             <div class="carousel-slide"><img src="../banner/1%20(2).jpg" alt="Banner 2"></div>
@@ -103,6 +85,7 @@
                 </section>
             </div>
 
+            <!-- PROVIDER SECTION -->
             <section class="provider-section">
                 <button class="provider-selector" id="hamburgerBtn"><span class="selector-icon">▼</span><span class="selector-name" id="currentProviderName">TODOS</span><span class="selector-count" id="currentProviderCount">[623]</span><span class="selector-status">●</span></button>
                 <div class="provider-menu" id="providerMenu">
@@ -117,28 +100,25 @@
                 </div>
             </section>
 
+            <!-- GAMES -->
             <section class="games-section">
                 <div class="games-grid" id="gamesGrid"></div>
                 <div class="load-more-container" id="loadMoreContainer" style="display: none;"><button class="load-more-btn" id="loadMoreBtn"><span class="btn-icon">▼</span><span class="btn-text">CARREGAR MAIS JOGOS</span><span class="btn-count" id="remainingGamesCount"></span></button></div>
             </section>
-
-            <section class="console-section">
-                <div class="console-window">
-                    <div class="console-header"><div class="console-title"><span class="console-icon">▶</span> CONSOLE DO SISTEMA</div></div>
-                    <div class="console-body">
-                        <div class="console-line"><span class="console-prompt">[SISTEMA]</span><span class="console-text">Inicializando...</span><span class="console-status console-ok">✓ OK</span></div>
-                        <div class="console-line"><span class="console-prompt">[RTP]</span><span class="console-text">Sistema ativo</span><span class="console-status console-active">● ATIVO</span></div>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 
-    <button class="floating-timer-button" id="floatingTimerBtn"><div class="floating-timer-text">CONNECTOR</div><div class="floating-timer-display"><span id="floatingTimerMinutes">01</span>:<span id="floatingTimerSeconds">27</span></div><div class="floating-timer-progress"><div class="floating-timer-progress-bar" id="floatingTimerProgressBar"></div></div></button>
+    <!-- FLOATING TIMER BUTTON -->
+    <button class="floating-timer-button" id="floatingTimerBtn">
+        <div class="floating-timer-text">CONNECTOR</div>
+        <div class="floating-timer-display"><span id="floatingTimerMinutes">01</span>:<span id="floatingTimerSeconds">27</span></div>
+        <div class="floating-timer-progress"><div class="floating-timer-progress-bar" id="floatingTimerProgressBar"></div></div>
+    </button>
     
-    <!-- ROOT: Telegram icon from main site -->
-    <a class="floating-telegram" href="https://t.me/lucas-channel" target="_blank"><img class="telegram-icon" src="../tg/tg.webp" alt="Telegram"></a>
+    <!-- TELEGRAM -->
+    <a class="floating-telegram" href="https://t.me/your-channel" target="_blank"><img class="telegram-icon" src="../tg/tg.webp" alt="Telegram"></a>
 
+    <!-- MODAL -->
     <div class="modal-overlay" id="popupOverlay">
         <div class="modal-container">
             <button class="modal-close" id="popupClose">×</button>
@@ -147,14 +127,22 @@
         </div>
     </div>
 
-    <!-- LOCAL: Platform Config (Lucas's affiliate links) -->
+    <!-- HIDDEN ELEMENTS FOR SCRIPT COMPATIBILITY -->
+    <div style="display:none;">
+        <span id="syncStatus"></span>
+        <span id="nextUpdate"></span>
+        <span id="activeGames">623</span>
+        <span id="systemUptime"></span>
+        <span id="systemTime"></span>
+    </div>
+
+    <!-- LOCAL: Platform Config -->
     <script src="platforms-config.js"></script>
     
-    <!-- ROOT: All shared scripts from main site -->
+    <!-- ROOT: Shared scripts -->
     <script src="../game-data.js"></script>
     <script src="../provider_image_lists.js"></script>
     <script src="../game_popularity.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>
-
