@@ -33,8 +33,6 @@
     
     /* Effects */
     --border-color: #fa2626;
-    --glow-red: 0 0 20px rgba(240, 50, 50, 0.5);
-    --glow-orange: 0 0 20px rgba(247, 44, 37, 0.5);
     
     --font-primary: 'Montserrat', sans-serif;
     --font-display: 'Bebas Neue', sans-serif;
@@ -90,7 +88,6 @@ body::before {
     position: absolute; 
     top: 0; width: 100%; height: 2px;
     background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-    box-shadow: var(--glow-red);
     animation: scanLine 6s linear infinite;
 }
 
@@ -133,7 +130,6 @@ body::before {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 0 30px rgba(191, 149, 63, 0.3);
 }
 
 .cta-box::before {
@@ -189,13 +185,11 @@ body::before {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(251, 191, 36, 0.6);
 }
 
 .cta-btn-arrow {
@@ -243,7 +237,6 @@ body::before {
     border-radius: 12px; 
     padding: 15px; 
     text-align: center;
-    box-shadow: var(--glow-red);
 }
 
 .timer-display { 
@@ -251,7 +244,6 @@ body::before {
     font-size: 48px; 
     font-weight: 700; 
     color: var(--accent-gold);
-    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
     display: flex; 
     justify-content: center; 
     gap: 5px; 
@@ -298,7 +290,6 @@ body::before {
     border-radius: 12px; 
     border: 2px solid var(--accent-secondary); 
     overflow: hidden; 
-    box-shadow: var(--glow-red);
     display: block; 
 }
 
@@ -323,7 +314,6 @@ body::before {
     overflow: hidden; 
     border-radius: 0px; 
     border: 2px solid var(--accent-secondary); 
-    box-shadow: var(--glow-red);
     background: var(--bg-secondary);
 }
 
@@ -369,7 +359,6 @@ body::before {
 
 .carousel-btn:hover {
     background: var(--accent-primary);
-    box-shadow: var(--glow-red);
 }
 
 .carousel-btn-prev { left: 10px; }
@@ -396,7 +385,6 @@ body::before {
 
 .dot.active { 
     background: var(--accent-primary); 
-    box-shadow: var(--glow-red); 
     width: 24px; 
     border-radius: 4px; 
 }
@@ -495,7 +483,6 @@ body::before {
 .game-card:hover { 
     transform: translateY(-4px); 
     border-color: var(--accent-primary); 
-    box-shadow: var(--glow-red); 
 }
 
 .game-image-container { 
@@ -545,7 +532,7 @@ body::before {
 .rtp-label { font-size: 10px; color: var(--text-muted); font-weight: 600; }
 .rtp-value { font-size: 20px; font-weight: 900; }
 
-.rtp-high { color: #22c55e; text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+.rtp-high { color: #22c55e; }
 .rtp-medium { color: var(--accent-gold); }
 .rtp-low { color: var(--accent-bright); }
 
@@ -586,7 +573,6 @@ body::before {
 
 .load-more-btn:hover {
     border-color: var(--accent-primary);
-    box-shadow: var(--glow-red);
 }
 
 /* ============================================
@@ -605,13 +591,6 @@ body::before {
     color: white; 
     cursor: pointer; 
     z-index: 999; 
-    box-shadow: 0 4px 30px rgba(220, 38, 38, 0.5);
-    animation: floatPulse 2s ease-in-out infinite;
-}
-
-@keyframes floatPulse {
-    0%, 100% { box-shadow: 0 4px 30px rgba(220, 38, 38, 0.5); }
-    50% { box-shadow: 0 4px 40px rgba(220, 38, 38, 0.8); }
 }
 
 .floating-timer-text { 
@@ -646,17 +625,8 @@ body::before {
 }
 
 /* ============================================
-   TELEGRAM BUTTON WITH RIPPLE
+   TELEGRAM BUTTON
    ============================================ */
-
-@keyframes ripple {
-    from {
-        box-shadow: 0 0 0 0 rgba(99, 210, 255, 0.45);
-    }
-    to {
-        box-shadow: 0 0 0 22px rgba(99, 210, 255, 0);
-    }
-}
 
 .floating-telegram { 
     position: fixed; 
@@ -670,7 +640,6 @@ body::before {
     align-items: center; 
     justify-content: center; 
     z-index: 1000;
-    animation: ripple 1.2s ease-out infinite;
 }
 
 .telegram-icon { width: 100%; height: 100%; }
@@ -702,7 +671,6 @@ body::before {
     max-height: 90vh; 
     overflow-y: auto; 
     position: relative;
-    box-shadow: var(--glow-red);
 }
 
 .modal-close { 
@@ -765,7 +733,6 @@ body::before {
 
 .platform-card:hover { 
     border-color: var(--accent-primary); 
-    box-shadow: var(--glow-red);
     transform: translateY(-2px);
 }
 
